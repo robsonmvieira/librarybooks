@@ -37,7 +37,7 @@ const bookSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'publisher',
   }],
-  quantityHands:{
+  quantityHands: {
     type: Number,
     required: true,
   },
