@@ -41,6 +41,9 @@ const bookSchema = new Schema({
     type: Number,
     required: true,
   },
+  image: {
+    type: String,
+  },
   year: {
     type: Number,
   },
