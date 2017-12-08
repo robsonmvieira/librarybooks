@@ -15,7 +15,7 @@ const AuthorSchema = Schema({
   ],
   email: {
     type: String,
-    required: String,
+    required: true,
   },
 
 });

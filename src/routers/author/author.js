@@ -4,7 +4,7 @@ const author = require('../../controllers/author/author-controller');
 
 router.route('/')
   .get(author.index)
-  .post(author.post);
+  .post(author.create);
 
 router.route('/:authorId')
   .get(author.one)

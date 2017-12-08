@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // routes
 app.use('/books', book);
 app.use('/publish', publish);
-app.use('author', author);
+app.use('/authors', author);
 
 
 app.listen(8000, () => {
