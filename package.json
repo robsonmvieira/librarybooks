@@ -2,7 +2,7 @@
   "name": "libraryapi",
   "version": "1.0.0",
   "description": "book's loan library in university ",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js"
   },
