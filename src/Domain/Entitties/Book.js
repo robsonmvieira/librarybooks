@@ -15,6 +15,7 @@ const bookSchema = new Schema({
   },
   Length: {
     type: Number,
+    required: true,
   },
   description: {
     type: String,
@@ -22,6 +23,7 @@ const bookSchema = new Schema({
   category: [{
     type: Schema.Types.ObjectId,
     ref: 'category',
+    required: true,
   }],
   price: {
     type: Number,
@@ -33,10 +35,12 @@ const bookSchema = new Schema({
   author: [{
     type: Schema.Types.ObjectId,
     ref: 'author',
+    required: true,
   }],
   publisher: [{
     type: Schema.Types.ObjectId,
     ref: 'publisher',
+    required: true,
   }],
   quantityHands: {
     type: Number,
@@ -47,6 +51,7 @@ const bookSchema = new Schema({
   },
   year: {
     type: Number,
+    required: true,
   },
   available: {
     type: Number,
