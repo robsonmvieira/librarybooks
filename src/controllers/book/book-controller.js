@@ -32,5 +32,10 @@ module.exports = {
     const { bookId } = req.params;
     const result = await Book.findByIdAndRemove(bookId);
     res.status(200).json({ message: true });
-  }
+  },
+  findIsbn: async (req, res, next) => {
+    const { isbn } = req.params;
+    const result = await Book.findOne(isbn);
+    res.status(200).json(result);
+  },
 }

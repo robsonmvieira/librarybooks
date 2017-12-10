@@ -17,6 +17,9 @@ const AuthorSchema = Schema({
     type: String,
     required: true,
   },
+  site: {
+    type: String,
+  },
 
 });
 

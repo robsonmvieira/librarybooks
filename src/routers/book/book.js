@@ -11,4 +11,7 @@ router.route('/:bookId')
   .patch(book.replace)
   .delete(book.remove);
 
+router.route('/:isbn')
+  .get();
+
 module.exports = router;

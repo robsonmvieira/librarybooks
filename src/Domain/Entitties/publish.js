@@ -11,7 +11,13 @@ const publishSchema = new Schema({
     type: String,
     required: true,
   },
-  phone: {
+  phone: [{
+    type: String,
+  }],
+  site: {
+    type: String,
+  },
+  address: {
     type: String,
   },
   authors: [{
