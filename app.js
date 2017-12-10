@@ -22,6 +22,6 @@ app.use('/authors', author);
 
 
 app.listen(8000, (err) => {
-  if (err) throw error;
+  if (err) throw err;
   console.log('running 8000');
 });

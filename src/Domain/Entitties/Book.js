@@ -11,6 +11,7 @@ const bookSchema = new Schema({
   ISBN: {
     type: String,
     required: true,
+    minlength: 9,
   },
   Length: {
     type: Number,
@@ -45,6 +46,9 @@ const bookSchema = new Schema({
     type: String,
   },
   year: {
+    type: Number,
+  },
+  available: {
     type: Number,
   },
 });
