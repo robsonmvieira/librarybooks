@@ -5,11 +5,16 @@ const Schema = mongoose.Schema;
 const studentSchema = Schema({
   name: {
     type: String,
-    requided: true,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
   },
   password: {
     type: String,
-    requided: true,
+    required: true,
     selected: false,
   },
   collegeId: {
