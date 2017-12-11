@@ -56,7 +56,17 @@ const bookSchema = new Schema({
   available: {
     type: Number,
   },
+  // reserve: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: ['student','teacher'],
+  //   }
+  // ],
 });
+
+bookSchema.methods.reserve = (id, userId ) => {
+  this.available -= 1;
+};
 
 const book = mongoose.model('book', bookSchema);
 
