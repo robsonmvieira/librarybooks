@@ -10,6 +10,8 @@ const book = require('./src/routers/book/book');
 const publish = require('./src/routers/publish/Publish');
 const author = require('./src/routers/author/author');
 
+// mid
+app.use(log('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -19,6 +21,7 @@ app.use('/publish', publish);
 app.use('/authors', author);
 
 
-app.listen(8000, () => {
+app.listen(8000, (err) => {
+  if (err) throw err;
   console.log('running 8000');
 });

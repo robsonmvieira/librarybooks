@@ -11,6 +11,7 @@ const bookSchema = new Schema({
   ISBN: {
     type: String,
     required: true,
+    minlength: 9,
   },
   Length: {
     type: Number,
@@ -51,8 +52,24 @@ const bookSchema = new Schema({
   year: {
     type: Number,
     required: true,
+<<<<<<< HEAD
+=======
   },
+  available: {
+    type: Number,
+>>>>>>> master
+  },
+  // reserve: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: ['student','teacher'],
+  //   }
+  // ],
 });
+
+bookSchema.methods.reserve = (id, userId ) => {
+  this.available -= 1;
+};
 
 const book = mongoose.model('book', bookSchema);
 
