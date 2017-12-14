@@ -7,20 +7,32 @@ module.exports = {
     const result = await newStudent.save();
     res.status(200).json(result);
   },
-  index: async () => {
-
+  index: async (req, res, next) => {
+    const result = Student.find({});
+    res.status(200).json(result);
   },
-  one: async () => {
-
+  one: async (req, res, next) => {
+    const { studentId } = req.params;
+    const result = Student.findById(studentId);
+    res.status(200).json(result);
   },
-  update: async () => {
-
+  update: async (req, res, next) => {
+    const { studentId } = req.params;
+    const newStudent = req.body;
+    const result = Student.findByIdAndUpdate(studentId, newStudent);
+    res.status(200).json({ message: true });
   },
-  replace: async () => {
-
+  replace: async (req, res, next) => {
+    const { studentId } = req.params;
+    const newStudent = req.body;
+    const result = Student.findByIdAndUpdate(studentId, newStudent);
+    res.status(200).json({ message: true });
   },
-  remove: async () => {
-     
+  remove: async (req, res, next) => {
+    const { studentId } = req.params;
+    const result = Student.findByIdAndRemove(studentId);
+    res.status(200).json({ message: true });
   },
 
-}
+};
+

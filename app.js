@@ -10,6 +10,7 @@ const book = require('./src/routers/book/book');
 const publish = require('./src/routers/publish/publish');
 const author = require('./src/routers/author/author');
 const teachers = require('./src/routers/teacher/teacher');
+const students = require('./src/routers/student/student');
 
 // mid
 app.use(log('dev'));
@@ -21,6 +22,7 @@ app.use('/books', book);
 app.use('/publish', publish);
 app.use('/authors', author);
 app.use('/teachers', teachers);
+app.use('/students', students);
 
 app.listen(8000, (err) => {
   if (err) throw err;
