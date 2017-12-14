@@ -12,6 +12,6 @@ router.route('/:bookId')
   .delete(book.remove);
 
 router.route('/:isbn')
-  .get();
+  .get(book.one);
 
 module.exports = router;

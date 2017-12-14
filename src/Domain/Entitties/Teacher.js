@@ -2,10 +2,16 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const studentSchema = Schema({
+const teacherSchema = new Schema({
   name: {
     type: String,
     required: true,
+  },
+  cpf: {
+    type: String,
+    required: true,
+    minlength: 11,
+    unique: true,
   },
   email: {
     type: String,
@@ -22,17 +28,13 @@ const studentSchema = Schema({
     required: true,
     selected: false,
   },
-  collegeId: {
-    type: Number,
-    required: true,
-  },
   isActivate: {
     type: Boolean,
     default: false,
   },
-
 });
 
-const student = mongoose.model('student', studentSchema);
+const teacher = mongoose.model('teacher', teacherSchema);
 
-module.exports = student;
+module.exports = teacher;
+

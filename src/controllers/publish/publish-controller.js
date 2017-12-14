@@ -1,4 +1,4 @@
-const Publish = require('../../Domain/Entitties/publish');
+const Publish = require('../../Domain/Entitties/Publish');
 
 module.exports = {
   create: async (req, res, next) => {

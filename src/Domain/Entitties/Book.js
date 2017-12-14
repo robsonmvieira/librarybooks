@@ -52,12 +52,6 @@ const bookSchema = new Schema({
   year: {
     type: Number,
     required: true,
-<<<<<<< HEAD
-=======
-  },
-  available: {
-    type: Number,
->>>>>>> master
   },
   // reserve: [
   //   {
