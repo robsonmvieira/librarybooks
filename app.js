@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const log = require('morgan');
+const multer = require('multer');
+
+const upload = multer({ dest: '/src/uploads' });
+
 
 const app = express();
 const connection = require('./src/database/connection');

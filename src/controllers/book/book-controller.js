@@ -1,5 +1,6 @@
 const Book = require('../../Domain/Entitties/Book');
 
+
 module.exports = {
   index: async (req, res, next) => {
     const result = await Book.find({});
