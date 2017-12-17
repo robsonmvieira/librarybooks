@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const log = require('morgan');
+const cors = require('cors');
 
 const app = express();
 const connection = require('./src/database/connection');
@@ -12,8 +13,9 @@ const author = require('./src/routers/author/author');
 const teachers = require('./src/routers/teacher/teacher');
 const students = require('./src/routers/student/student');
 
-// mid
+// middlewares
 app.use(log('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
